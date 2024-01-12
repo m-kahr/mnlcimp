@@ -79,7 +79,7 @@ function read_Snap_Instance!( inst::instance, params::Dict )
 	filename = ""
     prob_filename = "test_probabilities.csv"
 #    prob_filename = "tw-inststatsedge_rt_by_ot.csv"
-    filename = joinpath(params["root_path"], "data", "edge_stats", prob_filename)
+    filename = joinpath(params["root_path"], "data", "edgestats", prob_filename)
 
     f                       = open( filename )
     lines::Vector{String}   = readlines(f)
