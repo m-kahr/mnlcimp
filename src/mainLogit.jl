@@ -62,7 +62,9 @@ function main( params::Dict )
     root_path = dirname(@__DIR__)
     params["root_path"] = root_path
     params["ipath"] = joinpath(root_path, "data", "instances")      # path to instances
-    params["opath"] = joinpath(root_path, "results")                # path where results are written
+    opath = joinpath(root_path, "results")
+    isdir(opath) ? nothing : mkdir(opath)
+    params["opath"] = opath             # path where results are written
 
     # DEFINE GLOBAL VARIABLES (used to compute average values after sample average approximation)
     #aggregated values (over all SSA iterations)
