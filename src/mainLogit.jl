@@ -21,7 +21,7 @@ working_directory = dirname(@__FILE__)
 cd(working_directory)
 
 # ACTIVATE WORKING ENVIRONMENT (if not already active)
-if Base.active_project() != joinpath(dirname(@__DIR__), "Project.toml")
+if Base.active_project() != joinpath(dirname(@__FILE__), "Project.toml")
     ENV["CPLEX_STUDIO_BINARIES"] = CPLEX_DIR
     pkg"activate ."
     pkg"instantiate"
