@@ -4,7 +4,7 @@ This is an updated version of the code from the paper: [Kahr Michael, Leitner Ma
 The main changes compared to the original code include:
 - `CPLEX.jl` > than `0.6.6` is used which enables to use newer IBM CPLEX versions.
 - Generic callbacks are implemented (instead of the outdated legacy callbacks).
-- The outdated `LightGraphs.jl` package is updated to the `Graph.jl` package.
+- The outdated `LightGraphs.jl` package is replaced with the `Graph.jl` package.
 - The code now works on Windows, however, without tracking the memory consumption. This means that a memory limit is just set as `CPXPARAM_WorkMem`, without further memory consumption tracking within a callback.
 
 The code is briefly tested with:
